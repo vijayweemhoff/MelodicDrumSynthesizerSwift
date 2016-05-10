@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7E0D27D1CE2707100153E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D27C1CE2707000153E97 /* AppDelegate.swift */; };
+		C7E0D27F1CE2707100153E97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D27E1CE2707100153E97 /* ViewController.swift */; };
+		C7E0D2821CE2707100153E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E0D2801CE2707100153E97 /* Main.storyboard */; };
+		C7E0D2841CE2707100153E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E0D2831CE2707100153E97 /* Assets.xcassets */; };
+		C7E0D2871CE2707200153E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E0D2851CE2707200153E97 /* LaunchScreen.storyboard */; };
+		C7E0D2921CE2707200153E97 /* melodic_drum_test1_SWIFTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D2911CE2707200153E97 /* melodic_drum_test1_SWIFTTests.swift */; };
+		C7E0D29D1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D29C1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7E0D28E1CE2707200153E97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E0D2711CE2707000153E97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7E0D2781CE2707000153E97;
+			remoteInfo = melodic_drum_test1_SWIFT;
+		};
+		C7E0D2991CE2707200153E97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E0D2711CE2707000153E97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7E0D2781CE2707000153E97;
+			remoteInfo = melodic_drum_test1_SWIFT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C7E0D2791CE2707000153E97 /* melodic_drum_test1_SWIFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = melodic_drum_test1_SWIFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E0D27C1CE2707000153E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7E0D27E1CE2707100153E97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7E0D2811CE2707100153E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7E0D2831CE2707100153E97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7E0D2861CE2707200153E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7E0D2881CE2707200153E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7E0D28D1CE2707200153E97 /* melodic_drum_test1_SWIFTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = melodic_drum_test1_SWIFTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E0D2911CE2707200153E97 /* melodic_drum_test1_SWIFTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = melodic_drum_test1_SWIFTTests.swift; sourceTree = "<group>"; };
+		C7E0D2931CE2707200153E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7E0D2981CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = melodic_drum_test1_SWIFTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E0D29C1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = melodic_drum_test1_SWIFTUITests.swift; sourceTree = "<group>"; };
+		C7E0D29E1CE2707200153E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7E0D2761CE2707000153E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E0D28A1CE2707200153E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E0D2951CE2707200153E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7E0D2701CE2707000153E97 = {
+			isa = PBXGroup;
+			children = (
+				C7E0D27B1CE2707000153E97 /* melodic_drum_test1_SWIFT */,
+				C7E0D2901CE2707200153E97 /* melodic_drum_test1_SWIFTTests */,
+				C7E0D29B1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests */,
+				C7E0D27A1CE2707000153E97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7E0D27A1CE2707000153E97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7E0D2791CE2707000153E97 /* melodic_drum_test1_SWIFT.app */,
+				C7E0D28D1CE2707200153E97 /* melodic_drum_test1_SWIFTTests.xctest */,
+				C7E0D2981CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7E0D27B1CE2707000153E97 /* melodic_drum_test1_SWIFT */ = {
+			isa = PBXGroup;
+			children = (
+				C7E0D27C1CE2707000153E97 /* AppDelegate.swift */,
+				C7E0D27E1CE2707100153E97 /* ViewController.swift */,
+				C7E0D2801CE2707100153E97 /* Main.storyboard */,
+				C7E0D2831CE2707100153E97 /* Assets.xcassets */,
+				C7E0D2851CE2707200153E97 /* LaunchScreen.storyboard */,
+				C7E0D2881CE2707200153E97 /* Info.plist */,
+			);
+			path = melodic_drum_test1_SWIFT;
+			sourceTree = "<group>";
+		};
+		C7E0D2901CE2707200153E97 /* melodic_drum_test1_SWIFTTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7E0D2911CE2707200153E97 /* melodic_drum_test1_SWIFTTests.swift */,
+				C7E0D2931CE2707200153E97 /* Info.plist */,
+			);
+			path = melodic_drum_test1_SWIFTTests;
+			sourceTree = "<group>";
+		};
+		C7E0D29B1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7E0D29C1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.swift */,
+				C7E0D29E1CE2707200153E97 /* Info.plist */,
+			);
+			path = melodic_drum_test1_SWIFTUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7E0D2781CE2707000153E97 /* melodic_drum_test1_SWIFT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7E0D2A11CE2707200153E97 /* Build configuration list for PBXNativeTarget "melodic_drum_test1_SWIFT" */;
+			buildPhases = (
+				C7E0D2751CE2707000153E97 /* Sources */,
+				C7E0D2761CE2707000153E97 /* Frameworks */,
+				C7E0D2771CE2707000153E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = melodic_drum_test1_SWIFT;
+			productName = melodic_drum_test1_SWIFT;
+			productReference = C7E0D2791CE2707000153E97 /* melodic_drum_test1_SWIFT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7E0D28C1CE2707200153E97 /* melodic_drum_test1_SWIFTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7E0D2A41CE2707200153E97 /* Build configuration list for PBXNativeTarget "melodic_drum_test1_SWIFTTests" */;
+			buildPhases = (
+				C7E0D2891CE2707200153E97 /* Sources */,
+				C7E0D28A1CE2707200153E97 /* Frameworks */,
+				C7E0D28B1CE2707200153E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7E0D28F1CE2707200153E97 /* PBXTargetDependency */,
+			);
+			name = melodic_drum_test1_SWIFTTests;
+			productName = melodic_drum_test1_SWIFTTests;
+			productReference = C7E0D28D1CE2707200153E97 /* melodic_drum_test1_SWIFTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7E0D2971CE2707200153E97 /* melodic_drum_test1_SWIFTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7E0D2A71CE2707200153E97 /* Build configuration list for PBXNativeTarget "melodic_drum_test1_SWIFTUITests" */;
+			buildPhases = (
+				C7E0D2941CE2707200153E97 /* Sources */,
+				C7E0D2951CE2707200153E97 /* Frameworks */,
+				C7E0D2961CE2707200153E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7E0D29A1CE2707200153E97 /* PBXTargetDependency */,
+			);
+			name = melodic_drum_test1_SWIFTUITests;
+			productName = melodic_drum_test1_SWIFTUITests;
+			productReference = C7E0D2981CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7E0D2711CE2707000153E97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vijay Weemhoff";
+				TargetAttributes = {
+					C7E0D2781CE2707000153E97 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					C7E0D28C1CE2707200153E97 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C7E0D2781CE2707000153E97;
+					};
+					C7E0D2971CE2707200153E97 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C7E0D2781CE2707000153E97;
+					};
+				};
+			};
+			buildConfigurationList = C7E0D2741CE2707000153E97 /* Build configuration list for PBXProject "melodic_drum_test1_SWIFT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7E0D2701CE2707000153E97;
+			productRefGroup = C7E0D27A1CE2707000153E97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7E0D2781CE2707000153E97 /* melodic_drum_test1_SWIFT */,
+				C7E0D28C1CE2707200153E97 /* melodic_drum_test1_SWIFTTests */,
+				C7E0D2971CE2707200153E97 /* melodic_drum_test1_SWIFTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7E0D2771CE2707000153E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E0D2871CE2707200153E97 /* LaunchScreen.storyboard in Resources */,
+				C7E0D2841CE2707100153E97 /* Assets.xcassets in Resources */,
+				C7E0D2821CE2707100153E97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E0D28B1CE2707200153E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E0D2961CE2707200153E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7E0D2751CE2707000153E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E0D27F1CE2707100153E97 /* ViewController.swift in Sources */,
+				C7E0D27D1CE2707100153E97 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E0D2891CE2707200153E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E0D2921CE2707200153E97 /* melodic_drum_test1_SWIFTTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E0D2941CE2707200153E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E0D29D1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7E0D28F1CE2707200153E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7E0D2781CE2707000153E97 /* melodic_drum_test1_SWIFT */;
+			targetProxy = C7E0D28E1CE2707200153E97 /* PBXContainerItemProxy */;
+		};
+		C7E0D29A1CE2707200153E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7E0D2781CE2707000153E97 /* melodic_drum_test1_SWIFT */;
+			targetProxy = C7E0D2991CE2707200153E97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7E0D2801CE2707100153E97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7E0D2811CE2707100153E97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7E0D2851CE2707200153E97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7E0D2861CE2707200153E97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7E0D29F1CE2707200153E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7E0D2A01CE2707200153E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7E0D2A21CE2707200153E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = melodic_drum_test1_SWIFT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C7E0D2A31CE2707200153E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = melodic_drum_test1_SWIFT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C7E0D2A51CE2707200153E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = melodic_drum_test1_SWIFTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/melodic_drum_test1_SWIFT.app/melodic_drum_test1_SWIFT";
+			};
+			name = Debug;
+		};
+		C7E0D2A61CE2707200153E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = melodic_drum_test1_SWIFTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/melodic_drum_test1_SWIFT.app/melodic_drum_test1_SWIFT";
+			};
+			name = Release;
+		};
+		C7E0D2A81CE2707200153E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = melodic_drum_test1_SWIFTUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = melodic_drum_test1_SWIFT;
+			};
+			name = Debug;
+		};
+		C7E0D2A91CE2707200153E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = melodic_drum_test1_SWIFTUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = melodic_drum_test1_SWIFT;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7E0D2741CE2707000153E97 /* Build configuration list for PBXProject "melodic_drum_test1_SWIFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E0D29F1CE2707200153E97 /* Debug */,
+				C7E0D2A01CE2707200153E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7E0D2A11CE2707200153E97 /* Build configuration list for PBXNativeTarget "melodic_drum_test1_SWIFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E0D2A21CE2707200153E97 /* Debug */,
+				C7E0D2A31CE2707200153E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C7E0D2A41CE2707200153E97 /* Build configuration list for PBXNativeTarget "melodic_drum_test1_SWIFTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E0D2A51CE2707200153E97 /* Debug */,
+				C7E0D2A61CE2707200153E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C7E0D2A71CE2707200153E97 /* Build configuration list for PBXNativeTarget "melodic_drum_test1_SWIFTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E0D2A81CE2707200153E97 /* Debug */,
+				C7E0D2A91CE2707200153E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7E0D2711CE2707000153E97 /* Project object */;
+}
