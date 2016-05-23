@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2749A9DE71C7EF76917AF699802E842E40795CF0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2749A9DE71C7EF76917AF699802E842E40795CF0" : 0,
+    "3BD02AC4636C89AAAF24730637FC814BAE17CB07" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "585CB1A8-0849-492B-B44F-337B8E92AB7F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2749A9DE71C7EF76917AF699802E842E40795CF0" : "melodic_drum_test1_SWIFT\/",
+    "3BD02AC4636C89AAAF24730637FC814BAE17CB07" : "MelodicDrumSwiftCiska\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "melodic_drum_test1_SWIFT",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "melodic_drum_test1_SWIFT.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:vijayweemhoff\/MelodicDrumSynthesizerSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2749A9DE71C7EF76917AF699802E842E40795CF0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:vijayweemhoff\/MelodicDrumSynthesizer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3BD02AC4636C89AAAF24730637FC814BAE17CB07"
+    }
+  ]
+}
