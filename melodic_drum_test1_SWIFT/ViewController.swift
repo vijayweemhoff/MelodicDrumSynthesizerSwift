@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+      
+        //make test tone
+      playSound();
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -215,5 +219,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var showArrayTextField: UITextField!
     
     @IBOutlet weak var showOctaveState: UITextField!
+  
+  
+  //include voice
+  var voice = Voice.sharedInstance;
+  
+  
+  func playSound() {
+    AudioKit.start()
+    voice.start();
+    
+    //TODO's
+    //rename Instrument.swift -> Voice
+    //rename "AudioSystem group -> Audio
+    
+    //correcte output pakken: 
+      //-sourceMixer ipv osc als output. Dit werkend krijgen met geluid.
+      //-adsr werkend krijgen
+    
+    //AudioSysteem class of iets dergelijks toevoegen, 
+      //- output op 'AudioSysteem object' level verbinden ipv instrument level'
+      //-deze kan je vanuit je viewController de midi noten e.d. sturen
+    
+    //tap button connecten aan ViewController -> audioSysteem
+    
+    
+  
+  }
+  
 }
 

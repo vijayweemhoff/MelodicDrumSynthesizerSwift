@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E99F14E1CF30C7F00484F1A /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99F14D1CF30C7F00484F1A /* Instrument.swift */; };
 		C78684BC1CF306FC0089BDD4 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78684BA1CF306EF0089BDD4 /* AudioKit.framework */; };
 		C78684BD1CF306FC0089BDD4 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78684BA1CF306EF0089BDD4 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7E0D27D1CE2707100153E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D27C1CE2707000153E97 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E99F14D1CF30C7F00484F1A /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Instrument.swift; path = audiosystem/Instrument.swift; sourceTree = "<group>"; };
 		C78684BA1CF306EF0089BDD4 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		C7E0D2791CE2707000153E97 /* melodic_drum_test1_SWIFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = melodic_drum_test1_SWIFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E0D27C1CE2707000153E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E99F14C1CF30C1000484F1A /* AudioSystem */ = {
+			isa = PBXGroup;
+			children = (
+				4E99F14D1CF30C7F00484F1A /* Instrument.swift */,
+			);
+			name = AudioSystem;
+			sourceTree = "<group>";
+		};
 		C78684AE1CF302F90089BDD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		C7E0D2701CE2707000153E97 = {
 			isa = PBXGroup;
 			children = (
+				4E99F14C1CF30C1000484F1A /* AudioSystem */,
 				C7E0D27B1CE2707000153E97 /* melodic_drum_test1_SWIFT */,
 				C7E0D2901CE2707200153E97 /* melodic_drum_test1_SWIFTTests */,
 				C7E0D29B1CE2707200153E97 /* melodic_drum_test1_SWIFTUITests */,
@@ -285,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7E0D27F1CE2707100153E97 /* ViewController.swift in Sources */,
+				4E99F14E1CF30C7F00484F1A /* Instrument.swift in Sources */,
 				C7E0D27D1CE2707100153E97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "/Users/Gebruiker01/Documents/AudioKit-iOS/Examples/melodic_drum_test1_SWIFT";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = melodic_drum_test1_SWIFT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFT";
@@ -439,7 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "/Users/Gebruiker01/Documents/AudioKit-iOS/Examples/melodic_drum_test1_SWIFT";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = melodic_drum_test1_SWIFT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Vijay.melodic-drum-test1-SWIFT";
