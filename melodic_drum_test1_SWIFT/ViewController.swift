@@ -17,24 +17,72 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
       
-        //make test tone
-      playSound();
-      
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    var conductor = Conductor.sharedInstance
+    
+    func setDefaultValues() {
+        
+        // Set Preset Values
+        conductor.masterVolume.volume = 25.0 // Master Volume
+        conductor.core.offset1 = 0 // VCO1 Semitones
+        conductor.core.offset2 = 0 // VCO2 Semitones
+        conductor.core.detune = 0.0 // VCO2 Detune (Hz)
+        conductor.core.vcoBalance = 0.5 // VCO1/VCO2 Mix
+        conductor.core.subOscMix = 0.0 // SubOsc Mix
+        conductor.core.fmOscMix = 0.0 // FM Mix
+        conductor.core.fmMod = 0.0 // FM Modulation Amt
+        conductor.core.morph = 0.0 // Morphing between waveforms
+        conductor.core.noiseMix = 0.0 // Noise Mix
+        //conductor.filterSection.lfoAmplitude = 0.0 // LFO Amp (Hz)
+        //conductor.filterSection.lfoRate = 1.4 // LFO Rate
+        //conductor.filterSection.resonance = 0.5 // Filter Q/Rez
+        //conductor.multiDelay.time = 0.5 // Delay (seconds)
+        //conductor.multiDelay.mix = 0.5 // Dry/Wet
+        conductor.reverb.feedback = 0.88 // Amt
+        conductor.reverbMixer.balance = 0.4 // Dry/Wet
+        conductor.midiBendRange = 2.0 // MIDI bend range in +/- semitones
+        
+        //cutoffKnob.value = 0.36 // Cutoff Knob Position
+        //crushAmtKnob.value = 0.0 // Crusher Knob Position
+        
+        // ADSR
+        conductor.core.attackDuration = 0.1
+        conductor.core.decayDuration = 0.1
+        conductor.core.sustainLevel = 0.001
+        conductor.core.releaseDuration = 0
+        
+        // Update Knob & Slider UI Values
+        //setupKnobValues()
+        //setupSliderValues()
+        
+        // Update Toggle Presets
+        //displayModeToggled(plotToggle)
+        /*
+        vco1Toggled(vco1Toggle)
+        vco2Toggled(vco2Toggle)
+        filterToggled(filterToggle)
+        delayToggled(delayToggle)
+        reverbToggled(reverbToggle) */
+    }
+
 
     var xMutArray = 0;
     var counterAddArray=0;
     var countPlus=0;
+    
+    var counterKeyPressed=0;
+    var midiNote = 0;
+    var lastMidiNote = 0;
 
     @IBAction func tapButtonPressedDown(sender: UIButton) {
         //NSLog("tap!");
         
-        let stringForTextField = String(mutArray[xMutArray]);
         xMutArray=xMutArray+1;
         
         //check if mutArray is empty, to not show "List is Empty"
@@ -56,13 +104,45 @@ class ViewController: UIViewController {
         }
         
         //NSLog("xMutArray: %d", xMutArray);
+        let stringForTextField = String(mutArray[xMutArray]);
         
         showArrayTextField.text = stringForTextField;
+        
+        //initialize adsr
+        conductor.core.attackDuration = 0.1
+        conductor.core.decayDuration = 0.1
+        conductor.core.sustainLevel = 0.001
+        conductor.core.releaseDuration = 0.001
+
+        //Frequency wordt alleen aangepast wanneer er iets in de array gedaan is.
+        if(counterAddArray>=1)
+        {
+            midiNote = Int(mutArray[xMutArray] as! NSNumber);
+            
+            counterKeyPressed=counterKeyPressed+1;
+            //voice.receivedMIDINoteOn(avAudioNode, note: Double(mutArray[xMutArray] as! NSNumber), velocity: 80)
+            /// Sustain Level
+            
+            
+            if(counterKeyPressed>0)
+            {
+                conductor.core.stopNote(lastMidiNote)
+                //NSLog("killing the last note")
+            }
+            
+            conductor.core.playNote(midiNote,velocity: 80)
+            
+            //save midi note for killing it
+            lastMidiNote=midiNote;
+            
+        }
+        
+
     }
     
     @IBAction func addToArrayPressedDown(sender: UIButton) {
         //xMutArray is 1 to lose the "List is Empty" line
-        xMutArray=1;
+        xMutArray=0;
         
         counterAddArray=counterAddArray+1;
         
@@ -146,7 +226,7 @@ class ViewController: UIViewController {
         
         //xMutArray is 1 to lose the "List is Empty" line
         counterAddArray=counterAddArray+1;
-        xMutArray=1;
+        xMutArray=0;
         
         //add element to array
         mutArray.addObject(inputAfterOctaveSwitch);
@@ -220,15 +300,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var showOctaveState: UITextField!
   
-  
-  //include voice
-  var voice = Voice.sharedInstance;
-  
-  
-  func playSound() {
-    AudioKit.start()
-    voice.start();
-    
+    /*
     //TODO's
     //rename Instrument.swift -> Voice
     //rename "AudioSystem group -> Audio
@@ -236,16 +308,9 @@ class ViewController: UIViewController {
     //correcte output pakken: 
       //-sourceMixer ipv osc als output. Dit werkend krijgen met geluid.
       //-adsr werkend krijgen
-    
-    //AudioSysteem class of iets dergelijks toevoegen, 
-      //- output op 'AudioSysteem object' level verbinden ipv instrument level'
-      //-deze kan je vanuit je viewController de midi noten e.d. sturen
-    
-    //tap button connecten aan ViewController -> audioSysteem
-    
-    
+    */
   
-  }
-  
-}
+    
+    
+} //closing UIViewController
 
