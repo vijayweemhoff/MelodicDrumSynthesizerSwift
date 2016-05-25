@@ -1,0 +1,41 @@
+Logboek van Vijay Weemhoff
+Gemaakt op 26 mei 00:25
+
+26 mei:
+
+Vandaag besloten om implaats van zelf een audiosysteem te bouwen met AudioKit het systeem over te nemen van de voorbeeld code van AnalogSynthX.
+Het audiosysteem werkt nu en is bestuurbaar door de viewController en interface.
+
+Reden om het bestaande audiosysteem te gebruiken. Aantal belangrijke functies om de Envelope aan te sturen zaten in de class AKPolyphonicInstrument.
+Ik heb geprobeert de functie na te bouwen om alleen mijn voice aan te kunnen sturen. Dit lukte maar kon ik dan de Envelope maar 1 keer aanroepen.
+Daarna werkte de envelope niet meer.
+
+Problemen:
+Rodriques heb ik eerst gesproken op school en gaat de XCode development-pack voor me regelen.
+Ik moest hem daar voor mailen zodat hij mijn gegevens heeft. Hij heeft ook mijn GitHub.
+Gaf helaas wel aan dat het nog een week of 1-2 zou duren.
+
+Na het opstarten van de app is soms de eerste noot die je aanslaat met een andere envelope dan ingesteld. Dit lijkt nu gefixt.
+Kwam misschien omdat de interface naar de tweede noot uit de lijst sprong na het invoegen van midi-noten want nadat te verhelpen lijkt het vorige probleem ook verholpen.
+
+To Do's:
+Parameters synth controllable maken
+
+Nadenken over een interface met keyboard die scrollable is, vervelende manier van editen zo.
+
+Random velocity generator in de TapPressed functie bouwen zodat de ADSR bestuurd kan worden door die velocity
+(NSTimer voor note-off, de timer aantal (milli)seconden moet ook beinvloed worden door velocity dan)
+
+Nadenken over het opslaan van presets (lijsten kunnen opslaan voor bijvoorbeeld optredens)
+
+Nadenken over gestures om bijvoorbeeld naar begin lijst te gaan
+
+Nadenken over TableViewController om je midiNoten lijst te kunnen besturen
+
+Nadenken over een MIDI naar tekst converter maken MIDICC 60 word dan C1
+(waarschijnlijk met modulo te doen)
+
+Nadenken over test-sessies met muzikanten zodra de test-app er is
+
+
+
