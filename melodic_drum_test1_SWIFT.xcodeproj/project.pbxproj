@@ -12,6 +12,7 @@
 		C70A3DB71CF64C9100FA7EEC /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70A3DB61CF64C9100FA7EEC /* Conductor.swift */; };
 		C78684BC1CF306FC0089BDD4 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78684BA1CF306EF0089BDD4 /* AudioKit.framework */; };
 		C78684BD1CF306FC0089BDD4 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78684BA1CF306EF0089BDD4 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7D2FC581CF6FC7900C2F07E /* Logboek.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7D2FC571CF6FC7900C2F07E /* Logboek.txt */; };
 		C7E0D27D1CE2707100153E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D27C1CE2707000153E97 /* AppDelegate.swift */; };
 		C7E0D27F1CE2707100153E97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D27E1CE2707100153E97 /* ViewController.swift */; };
 		C7E0D2821CE2707100153E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E0D2801CE2707100153E97 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		C70A3DB41CF64C7D00FA7EEC /* CoreInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreInstrument.swift; path = audiosystem/CoreInstrument.swift; sourceTree = "<group>"; };
 		C70A3DB61CF64C9100FA7EEC /* Conductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conductor.swift; path = audiosystem/Conductor.swift; sourceTree = "<group>"; };
 		C78684BA1CF306EF0089BDD4 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		C7D2FC571CF6FC7900C2F07E /* Logboek.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Logboek.txt; sourceTree = "<group>"; };
 		C7E0D2791CE2707000153E97 /* melodic_drum_test1_SWIFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = melodic_drum_test1_SWIFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E0D27C1CE2707000153E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7E0D27E1CE2707100153E97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		C7E0D2701CE2707000153E97 = {
 			isa = PBXGroup;
 			children = (
+				C7D2FC571CF6FC7900C2F07E /* Logboek.txt */,
 				4E99F14C1CF30C1000484F1A /* AudioSystem */,
 				C7E0D27B1CE2707000153E97 /* melodic_drum_test1_SWIFT */,
 				C7E0D2901CE2707200153E97 /* melodic_drum_test1_SWIFTTests */,
@@ -274,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D2FC581CF6FC7900C2F07E /* Logboek.txt in Resources */,
 				C7E0D2871CE2707200153E97 /* LaunchScreen.storyboard in Resources */,
 				C7E0D2841CE2707100153E97 /* Assets.xcassets in Resources */,
 				C7E0D2821CE2707100153E97 /* Main.storyboard in Resources */,

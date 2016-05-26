@@ -15,6 +15,11 @@ Rodriques heb ik eerst gesproken op school en gaat de XCode development-pack voo
 Ik moest hem daar voor mailen zodat hij mijn gegevens heeft. Hij heeft ook mijn GitHub.
 Gaf helaas wel aan dat het nog een week of 1-2 zou duren.
 
+26 mei een uur geprobeert een tweede viewController te maken om de synth in aan te kunnen sturen, swipe gesture push is deprecated.
+Daarna geprobeert swipe gesture Show maar die wordt geenforced omdat hij aan zogenaamd meerdere views gekoppeld is wat ik niet snap.
+Daarna tutorial gevolgd over met code en ScrollView de swipe gesture te maken maar dat crashed (waarschijnlijk omdat dit project gestart is als single view application en de huidige viewconroller geen xib file heeft. Als je die aanmaakt en de tutorial volgt crashed de app)
+Als je daarna de wijzigingen verwijdert crashed de app nog steeds, dus ben ik weer terug gegaan naar de laatste commit.
+
 Na het opstarten van de app is soms de eerste noot die je aanslaat met een andere envelope dan ingesteld. Dit lijkt nu gefixt.
 Kwam misschien omdat de interface naar de tweede noot uit de lijst sprong na het invoegen van midi-noten want nadat te verhelpen lijkt het vorige probleem ook verholpen.
 
