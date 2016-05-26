@@ -211,6 +211,14 @@
                                     <action selector="octaveUpPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="efF-X0-5SF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcO-1k-yjg">
+                                <rect key="frame" x="285" y="698" width="130" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Edit Synth"/>
+                                <connections>
+                                    <segue destination="zUq-ny-b0Q" kind="show" id="Exf-Lo-LbC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.98845422579999997" blue="0.99779467229999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,6 +232,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="387"/>
+        </scene>
+        <!--ViewController2-->
+        <scene sceneID="NoP-xn-7L9">
+            <objects>
+                <viewController id="zUq-ny-b0Q" userLabel="ViewController2" customClass="ViewController2" customModule="melodic_drum_test1_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jpF-q5-pRv"/>
+                        <viewControllerLayoutGuide type="bottom" id="vte-do-6g5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O7x-gI-K16">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VU-9h-O3v">
+                                <rect key="frame" x="10" y="698" width="140" height="30"/>
+                                <state key="normal" title="Go back to interface"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="bWR-l4-okN"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Imh-ci-oXD">
+                                <rect key="frame" x="46" y="63" width="291" height="29"/>
+                                <segments>
+                                    <segment title="Triangle"/>
+                                    <segment title="Square"/>
+                                    <segment title="PWM"/>
+                                    <segment title="Sawtooth"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chooseWave:" destination="zUq-ny-b0Q" eventType="valueChanged" id="q8O-d9-y7I"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azO-rb-wUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="387"/>
         </scene>
     </scenes>
 </document>

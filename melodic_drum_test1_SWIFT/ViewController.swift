@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-      
+        NSLog("viewControllerDidLoad")
     }
 
     override func didReceiveMemoryWarning() {
@@ -300,6 +300,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var showOctaveState: UITextField!
   
+    func receiveChooseWave(wave: Int)
+    {
+        NSLog("he! een wave-int: %d",wave)
+    }
     /*
     //TODO's
     //rename Instrument.swift -> Voice

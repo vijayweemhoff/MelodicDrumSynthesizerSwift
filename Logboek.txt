@@ -11,6 +11,11 @@ Ik heb geprobeert de functie na te bouwen om alleen mijn voice aan te kunnen stu
 Daarna werkte de envelope niet meer.
 
 Problemen:
+Je kan nu waveform aanpassen in viewController2 maar:
+Je kan maar 3 keer de waveform aanpassen en dan stopt de synth met spelen (wtf?)
+Heen en weer schakelen tussen viewcontrollers initialiseerd opnieuw. Dus elke keer is array weer leeg.
+Zelfde geld ook voor segmented control, die initialiseerd ook opnieuw en onthoud dus niet de waveform keuze.
+
 Rodriques heb ik eerst gesproken op school en gaat de XCode development-pack voor me regelen.
 Ik moest hem daar voor mailen zodat hij mijn gegevens heeft. Hij heeft ook mijn GitHub.
 Gaf helaas wel aan dat het nog een week of 1-2 zou duren.
