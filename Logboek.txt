@@ -12,9 +12,12 @@ Daarna werkte de envelope niet meer.
 
 Problemen:
 Je kan nu waveform aanpassen in viewController2 maar:
-Je kan maar 3 keer de waveform aanpassen en dan stopt de synth met spelen (wtf?)
+Je kan maar 3 keer de waveform aanpassen en dan stopt de synth met spelen (wtf?) <- komt waarschijnlijk door initialisering tijdens spelen van envelopes
+(vorige midi noot onthoud ie niet door initialisering en kan hem daardoor ook niet cancelen).
+
 Heen en weer schakelen tussen viewcontrollers initialiseerd opnieuw. Dus elke keer is array weer leeg.
 Zelfde geld ook voor segmented control, die initialiseerd ook opnieuw en onthoud dus niet de waveform keuze.
+
 
 Rodriques heb ik eerst gesproken op school en gaat de XCode development-pack voor me regelen.
 Ik moest hem daar voor mailen zodat hij mijn gegevens heeft. Hij heeft ook mijn GitHub.
@@ -35,6 +38,7 @@ Nadenken over een interface met keyboard die scrollable is, vervelende manier va
 
 Random velocity generator in de TapPressed functie bouwen zodat de ADSR bestuurd kan worden door die velocity
 (NSTimer voor note-off, de timer aantal (milli)seconden moet ook beinvloed worden door velocity dan)
+Array gemaakt met 6 waardes optellend, nu nog de adsr aanpassen voordat hij word afgevuurd door playNote()
 
 Nadenken over het opslaan van presets (lijsten kunnen opslaan voor bijvoorbeeld optredens)
 

@@ -12,7 +12,7 @@ class ViewController2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NSLog("ViewController2 did load..")
         // Do any additional setup after loading the view.
     }
     

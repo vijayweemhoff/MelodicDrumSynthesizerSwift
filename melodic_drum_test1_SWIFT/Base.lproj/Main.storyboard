@@ -212,11 +212,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcO-1k-yjg">
-                                <rect key="frame" x="285" y="698" width="130" height="30"/>
+                                <rect key="frame" x="275" y="698" width="130" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Edit Synth"/>
                                 <connections>
-                                    <segue destination="zUq-ny-b0Q" kind="show" id="Exf-Lo-LbC"/>
+                                    <segue destination="zUq-ny-b0Q" kind="show" id="nlV-2d-87A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -249,7 +249,7 @@
                                 <rect key="frame" x="10" y="698" width="140" height="30"/>
                                 <state key="normal" title="Go back to interface"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="bWR-l4-okN"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gFf-3P-7w2"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Imh-ci-oXD">

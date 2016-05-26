@@ -10,13 +10,14 @@ import UIKit
 import AudioKit
 
 var mutArray : NSMutableArray = ["List is empty"]
+var velocityArray : NSArray = [20,40,60,80,100,120]
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        NSLog("viewControllerDidLoad")
+        NSLog("ViewController did load..")
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,6 +80,9 @@ class ViewController: UIViewController {
     var counterKeyPressed=0;
     var midiNote = 0;
     var lastMidiNote = 0;
+    
+    var xVelocityArray=0;
+    var velocity=0;
 
     @IBAction func tapButtonPressedDown(sender: UIButton) {
         //NSLog("tap!");
@@ -130,7 +134,17 @@ class ViewController: UIViewController {
                 //NSLog("killing the last note")
             }
             
-            conductor.core.playNote(midiNote,velocity: 80)
+            
+            if(xVelocityArray>5)
+            {
+                xVelocityArray=0;
+            }
+            
+            velocity = Int(velocityArray[xVelocityArray] as! NSNumber);
+            xVelocityArray=xVelocityArray+1;
+            NSLog("veloctiy is: %d",velocity)
+            
+            conductor.core.playNote(midiNote,velocity: velocity)
             
             //save midi note for killing it
             lastMidiNote=midiNote;
@@ -159,6 +173,7 @@ class ViewController: UIViewController {
         counterAddArray=0;
         mutArray.removeAllObjects();
         mutArray.addObject("List is empty");
+        counterKeyPressed=0;
     }
     
     @IBAction func deleteLastObjectPressedTouchUpInside(sender: UIButton) {
@@ -180,6 +195,7 @@ class ViewController: UIViewController {
              if(counterAddArray==0)
              {
                 xMutArray=0;
+                counterKeyPressed=0;
              }
         }
         else
