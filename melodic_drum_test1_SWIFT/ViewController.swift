@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Foundation
 import AudioKit
 
 var mutArray : NSMutableArray = ["List is empty"]
-var velocityArray : NSArray = [20,40,60,80,100,120]
+var velocityArray : NSArray = [20.0,40.0,60.0,80.0,100.0,120.0]
 
 class ViewController: UIViewController {
 
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
     func setDefaultValues() {
         
         // Set Preset Values
-        conductor.masterVolume.volume = 25.0 // Master Volume
+        conductor.masterVolume.volume = 50.0 // Master Volume
         conductor.core.offset1 = 0 // VCO1 Semitones
         conductor.core.offset2 = 0 // VCO2 Semitones
         conductor.core.detune = 0.0 // VCO2 Detune (Hz)
@@ -83,6 +84,7 @@ class ViewController: UIViewController {
     
     var xVelocityArray=0;
     var velocity=0;
+    var timer = NSTimer()
 
     @IBAction func tapButtonPressedDown(sender: UIButton) {
         //NSLog("tap!");
@@ -111,12 +113,7 @@ class ViewController: UIViewController {
         let stringForTextField = String(mutArray[xMutArray]);
         
         showArrayTextField.text = stringForTextField;
-        
-        //initialize adsr
-        conductor.core.attackDuration = 0.1
-        conductor.core.decayDuration = 0.1
-        conductor.core.sustainLevel = 0.001
-        conductor.core.releaseDuration = 0.001
+      
 
         //Frequency wordt alleen aangepast wanneer er iets in de array gedaan is.
         if(counterAddArray>=1)
@@ -144,15 +141,40 @@ class ViewController: UIViewController {
             xVelocityArray=xVelocityArray+1;
             NSLog("veloctiy is: %d",velocity)
             
+            
+            //initialize adsr
+            conductor.core.attackDuration = 0.1
+            conductor.core.decayDuration = 0.1
+            conductor.core.sustainLevel = 1.0
+            conductor.core.releaseDuration = 0.001
+            
             conductor.core.playNote(midiNote,velocity: velocity)
+            let velocityTime = 0.25+Double(velocity/80)
+            NSLog("%f",velocityTime)
+            
+            timer.invalidate()
+            timer = NSTimer.scheduledTimerWithTimeInterval(velocityTime, target: self, selector: #selector(ViewController.noteOFF), userInfo: nil, repeats: false)
             
             //save midi note for killing it
             lastMidiNote=midiNote;
             
         }
-        
 
+        
     }
+    
+    func noteOFF()
+    {
+        conductor.core.stopNote(lastMidiNote)
+        NSLog("timer done")
+    }
+    
+//    func resetTimer()
+//    {
+//        timer.invalidate()
+//        timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.noteOFF), userInfo: nil, repeats: false)
+//    }
+    
     
     @IBAction func addToArrayPressedDown(sender: UIButton) {
         //xMutArray is 1 to lose the "List is Empty" line
@@ -316,10 +338,27 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var showOctaveState: UITextField!
   
-    func receiveChooseWave(wave: Int)
-    {
-        NSLog("he! een wave-int: %d",wave)
+    @IBAction func chooseWave(sender: AnyObject) {
+        let index = sender.selectedSegmentIndex
+        
+        switch String(index)
+        {
+        case "0" :
+            conductor.core.waveform1 = Double(index)
+        case "1" :
+            conductor.core.waveform1 = Double(index)
+        case "2" :
+            conductor.core.waveform1 = Double(index)
+        case "3" :
+            conductor.core.waveform1 = Double(index)
+            
+        default:
+            break
+        }
+
+        
     }
+
     /*
     //TODO's
     //rename Instrument.swift -> Voice

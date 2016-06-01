@@ -15,7 +15,7 @@ class Conductor: AKMIDIListener {
     /// Globally accessible singleton
     static let sharedInstance = Conductor()
     
-    var core = CoreInstrument(voiceCount: 3)
+    var core = CoreInstrument(voiceCount: 1)
     //var bitCrusher: AKBitCrusher
     //var fatten: Fatten
     //var filterSection: FilterSection

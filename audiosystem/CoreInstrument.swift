@@ -200,9 +200,9 @@ class CoreInstrument: AKPolyphonicInstrument {
     init(voiceCount: Int) {
         super.init(voice: CoreVoice(), voiceCount: voiceCount)
         
-        amplitude = 0.6
-        //let sourceCount = 11
-        //amplitude = 1.0 /  Double(sourceCount * voiceCount)
+        //amplitude = 0.6
+        let sourceCount = 11
+        amplitude = 1.0 /  Double(sourceCount * voiceCount)
         
     }
     
