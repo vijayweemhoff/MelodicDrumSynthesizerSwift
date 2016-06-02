@@ -31,6 +31,17 @@ Als je daarna de wijzigingen verwijdert crashed de app nog steeds, dus ben ik we
 Na het opstarten van de app is soms de eerste noot die je aanslaat met een andere envelope dan ingesteld. Dit lijkt nu gefixt.
 Kwam misschien omdat de interface naar de tweede noot uit de lijst sprong na het invoegen van midi-noten want nadat te verhelpen lijkt het vorige probleem ook verholpen.
 
+
+1 juni:
+Geklooit om een tweede viewController te maken zonder te resetten, veel gestoeid met het groot en klein maken van een container in de main viewcontroller. Moet even in een nieuw project de basis onder de knie krijgen. Beginnetje gemaakt met velocity aan lengte van de note koppelen.
+Besloten om in een nieuw project te oefenen met scrollview om te kijken of ik een keyboard er in kan bouwen.
+
+2 juni:
+Lengte aan velocity gekoppeld met note off door NSTimer en release langer met hogere velocity.
+In nieuw project een scrollView Keyboard gemaakt, te vinden op GitHub in repositorie scrollView_keyboard_test.
+Scrollable Keyboard is geimplementeerd in app. Preview sound ook ingebouwd tijdens invoeren.
+
+
 To Do's:
 Parameters synth controllable maken
 

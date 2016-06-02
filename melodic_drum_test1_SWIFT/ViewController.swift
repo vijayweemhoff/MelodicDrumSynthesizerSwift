@@ -15,11 +15,208 @@ var velocityArray : NSArray = [20.0,40.0,60.0,80.0,100.0,120.0]
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var octaveDown: UIButton!
+    @IBOutlet weak var octaveUp: UIButton!
+    @IBOutlet weak var tapButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    let numberOfButtons = 36
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         NSLog("ViewController did load..")
+        
+        //set Preset Control values
+        setDefaultValues()
+        
+        //set up scrollable keyBoard
+        setupKeyboard()
+        
+        tapButton.layer.cornerRadius = 4
+        octaveDown.layer.cornerRadius = 4
+        octaveUp.layer.cornerRadius = 4
+    
     }
+    
+    func setupKeyboard()
+    {
+        for index in 0..<self.numberOfButtons {
+            var buttonHeight=0
+            var buttonWidth=0
+            var buttonX=0
+            var plusIndexBlack=0
+            var minIndexWhite=0
+            
+            if(index>=12&&index<24)
+            {
+                plusIndexBlack=420
+                minIndexWhite=300
+            }
+            
+            if(index>=24)
+            {
+                plusIndexBlack=840
+                minIndexWhite=600
+            }
+            
+            switch(index%12){
+            case 0:
+                buttonX = (index * 60)-minIndexWhite
+                buttonHeight=191
+                buttonWidth=60
+            case 1:
+                buttonX = (index * 60)-minIndexWhite
+                buttonHeight=191
+                buttonWidth=60
+            case 2:
+                buttonX = (index * 60)-minIndexWhite
+                buttonHeight=191
+                buttonWidth=60
+            case 3:
+                buttonX = (index * 60)-minIndexWhite
+                buttonHeight = 191
+                buttonWidth=60
+            case 4:
+                buttonX = (index * 60)-minIndexWhite
+                buttonHeight=191
+                buttonWidth=60
+            case 5:
+                buttonX = (index * 60)-minIndexWhite
+                buttonHeight=191
+                buttonWidth=60
+            case 6:
+                buttonX = (index * 60)-minIndexWhite
+                buttonHeight = 191
+                buttonWidth=60
+            case 7:
+                buttonX = 40 + plusIndexBlack
+                buttonHeight = 126
+                buttonWidth=40
+            case 8:
+                buttonX = 100 + plusIndexBlack
+                buttonHeight = 126
+                buttonWidth=40
+            case 9:
+                buttonX = 220 + plusIndexBlack
+                buttonHeight=126
+                buttonWidth=40
+            case 10:
+                buttonX = 280 + plusIndexBlack
+                buttonHeight = 126
+                buttonWidth=40
+            case 11:
+                buttonX = 340 + plusIndexBlack
+                buttonHeight=126
+                buttonWidth=40
+            default: break
+            }
+            let frame1 = CGRect(x: 0  +  buttonX, y: 0, width: buttonWidth, height: buttonHeight)
+            let button = UIButton(frame: frame1)
+            button.setTitle("", forState: .Normal)
+            
+            switch(index%12){
+            case 0:
+                button.backgroundColor = UIColor.whiteColor()
+            case 1:
+                button.backgroundColor = UIColor.whiteColor()
+            case 2:
+                button.backgroundColor = UIColor.whiteColor()
+            case 3:
+                button.backgroundColor = UIColor.whiteColor()
+            case 4:
+                button.backgroundColor = UIColor.whiteColor()
+            case 5:
+                button.backgroundColor = UIColor.whiteColor()
+            case 6:
+                button.backgroundColor = UIColor.whiteColor()
+            case 7:
+                button.backgroundColor = UIColor.blackColor()
+            case 8:
+                button.backgroundColor = UIColor.blackColor()
+            case 9:
+                button.backgroundColor = UIColor.blackColor()
+            case 10:
+                button.backgroundColor = UIColor.blackColor()
+            case 11:
+                button.backgroundColor = UIColor.blackColor()
+            default: break
+            }
+            button.layer.cornerRadius = 4
+            button.layer.borderWidth=1
+            button.layer.borderColor = UIColor.blackColor().CGColor
+            button.addTarget(self, action: #selector(buttonAction), forControlEvents: UIControlEvents.TouchUpInside)
+            button.tag = index
+            
+            self.scrollView.addSubview(button)
+            
+        }
+        //set width off scrollView
+        self.scrollView.contentSize.width = CGFloat(1260)
+    }
+    
+    
+    func buttonAction(sender:UIButton!)
+    {
+        let buttonTag:UIButton = sender
+        var key="C"
+        var plusOctave=0
+        
+        if(buttonTag.tag>=12&&buttonTag.tag<24)
+        {
+            plusOctave=12
+        }
+        if(buttonTag.tag>=24)
+        {
+            plusOctave=24
+        }
+        
+        switch(buttonTag.tag%12) {
+        case 0:
+            key="C"
+            receiveKeyboard(48+plusOctave)
+        case 1:
+            key="D"
+            receiveKeyboard(50+plusOctave)
+        case 2:
+            key="E"
+            receiveKeyboard(52+plusOctave)
+        case 3:
+            key="F"
+            receiveKeyboard(53+plusOctave)
+        case 4:
+            key="G"
+            receiveKeyboard(55+plusOctave)
+        case 5:
+            key="A"
+            receiveKeyboard(57+plusOctave)
+        case 6:
+            key="B"
+            receiveKeyboard(59+plusOctave)
+        case 7:
+            key="C#"
+            receiveKeyboard(49+plusOctave)
+        case 8:
+            key="D#"
+            receiveKeyboard(51+plusOctave)
+        case 9:
+            key="F#"
+            receiveKeyboard(54+plusOctave)
+        case 10:
+            key="G#"
+            receiveKeyboard(56+plusOctave)
+        case 11:
+            key="A#"
+            receiveKeyboard(58+plusOctave)
+        default: break
+        }
+        //NSLog("key: %@",key)
+        //NSLog("tag %d",buttonTag.tag)
+        
+        // display element in text field
+        showArrayTextField.text = key;
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,7 +228,7 @@ class ViewController: UIViewController {
     func setDefaultValues() {
         
         // Set Preset Values
-        conductor.masterVolume.volume = 50.0 // Master Volume
+        conductor.masterVolume.volume = 25.0 // Master Volume
         conductor.core.offset1 = 0 // VCO1 Semitones
         conductor.core.offset2 = 0 // VCO2 Semitones
         conductor.core.detune = 0.0 // VCO2 Detune (Hz)
@@ -41,36 +238,15 @@ class ViewController: UIViewController {
         conductor.core.fmMod = 0.0 // FM Modulation Amt
         conductor.core.morph = 0.0 // Morphing between waveforms
         conductor.core.noiseMix = 0.0 // Noise Mix
-        //conductor.filterSection.lfoAmplitude = 0.0 // LFO Amp (Hz)
-        //conductor.filterSection.lfoRate = 1.4 // LFO Rate
-        //conductor.filterSection.resonance = 0.5 // Filter Q/Rez
-        //conductor.multiDelay.time = 0.5 // Delay (seconds)
-        //conductor.multiDelay.mix = 0.5 // Dry/Wet
         conductor.reverb.feedback = 0.88 // Amt
         conductor.reverbMixer.balance = 0.4 // Dry/Wet
         conductor.midiBendRange = 2.0 // MIDI bend range in +/- semitones
-        
-        //cutoffKnob.value = 0.36 // Cutoff Knob Position
-        //crushAmtKnob.value = 0.0 // Crusher Knob Position
-        
+
         // ADSR
         conductor.core.attackDuration = 0.1
         conductor.core.decayDuration = 0.1
         conductor.core.sustainLevel = 0.001
         conductor.core.releaseDuration = 0
-        
-        // Update Knob & Slider UI Values
-        //setupKnobValues()
-        //setupSliderValues()
-        
-        // Update Toggle Presets
-        //displayModeToggled(plotToggle)
-        /*
-        vco1Toggled(vco1Toggle)
-        vco2Toggled(vco2Toggle)
-        filterToggled(filterToggle)
-        delayToggled(delayToggle)
-        reverbToggled(reverbToggle) */
     }
 
 
@@ -84,6 +260,7 @@ class ViewController: UIViewController {
     
     var xVelocityArray=0;
     var velocity=0;
+    var velocity2=0.0;
     var timer = NSTimer()
 
     @IBAction func tapButtonPressedDown(sender: UIButton) {
@@ -128,7 +305,7 @@ class ViewController: UIViewController {
             if(counterKeyPressed>0)
             {
                 conductor.core.stopNote(lastMidiNote)
-                //NSLog("killing the last note")
+                NSLog("killing the last note")
             }
             
             
@@ -138,6 +315,7 @@ class ViewController: UIViewController {
             }
             
             velocity = Int(velocityArray[xVelocityArray] as! NSNumber);
+            velocity2 = Double(velocityArray[xVelocityArray] as! NSNumber);
             xVelocityArray=xVelocityArray+1;
             NSLog("veloctiy is: %d",velocity)
             
@@ -145,35 +323,34 @@ class ViewController: UIViewController {
             //initialize adsr
             conductor.core.attackDuration = 0.1
             conductor.core.decayDuration = 0.1
-            conductor.core.sustainLevel = 1.0
-            conductor.core.releaseDuration = 0.001
+            conductor.core.sustainLevel = 0.8
+            conductor.core.releaseDuration = (velocity2/63.5)-0.2
             
-            conductor.core.playNote(midiNote,velocity: velocity)
-            let velocityTime = 0.25+Double(velocity/80)
-            NSLog("%f",velocityTime)
+            let release = (velocity2/63.5)-0.2
+            NSLog("release: %f",release)
             
+            let velocityTime = velocity2/90.0
+            NSLog("velocityNSTimer: %f",velocityTime)
+            
+            //first kill last timer, then start new for note-off
             timer.invalidate()
             timer = NSTimer.scheduledTimerWithTimeInterval(velocityTime, target: self, selector: #selector(ViewController.noteOFF), userInfo: nil, repeats: false)
+
+            //play the Note
+            conductor.core.playNote(midiNote,velocity: velocity)
             
             //save midi note for killing it
             lastMidiNote=midiNote;
             
         }
 
-        
     }
     
     func noteOFF()
     {
-        conductor.core.stopNote(lastMidiNote)
+        conductor.core.stopNote(midiNote)
         NSLog("timer done")
     }
-    
-//    func resetTimer()
-//    {
-//        timer.invalidate()
-//        timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.noteOFF), userInfo: nil, repeats: false)
-//    }
     
     
     @IBAction func addToArrayPressedDown(sender: UIButton) {
@@ -256,6 +433,13 @@ class ViewController: UIViewController {
         showOctaveState.text = String(octaveState);
     }
     
+    var previewTimer = NSTimer()
+    var lastInputKeyboard = 0
+    
+    func previewNoteOFF()
+    {
+        conductor.core.stopNote(lastInputKeyboard)
+    }
     
     func receiveKeyboard(inputKeyboard: Int)
     {   //add buttons to put octave up or down
@@ -268,71 +452,22 @@ class ViewController: UIViewController {
         
         //add element to array
         mutArray.addObject(inputAfterOctaveSwitch);
-        // display element in text field
-        showArrayTextField.text = String(inputAfterOctaveSwitch);
+        
+        //stop last sound
+        conductor.core.stopNote(lastInputKeyboard)
+        
+        //play sound
+        conductor.core.releaseDuration = 0.1
+        
+        //first kill last timer, then start new for note-off
+        previewTimer.invalidate()
+        previewTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(ViewController.previewNoteOFF), userInfo: nil, repeats: false)
+        
+        //play the Note
+        conductor.core.playNote(inputKeyboard,velocity: 80)
+        
+        lastInputKeyboard=inputKeyboard
     }
- 
- 
-    @IBAction func cKeyPressed2(sender: UIButton) {
-        //NSLog("I'm a C key!");
-        receiveKeyboard(60);
-    }
-    
-    @IBAction func cSharpKeyPressed(sender: UIButton) {
-        //NSLog("I'm a C# key!")
-        receiveKeyboard(61);
-    }
-    
-    @IBAction func dKeyPressed(sender: UIButton) {
-        //NSLog("I'm a D key!")
-        receiveKeyboard(62);
-    }
-    
-    @IBAction func dSharpKeyPressed(sender: UIButton) {
-        //NSLog("I'm a D# key!")
-        receiveKeyboard(63);
-    }
-    
-    @IBAction func eKeyPressed(sender: UIButton) {
-        //NSLog("I'm a E key!")
-        receiveKeyboard(64);
-    }
-    
-    @IBAction func fKeyPressed(sender: UIButton) {
-        //NSLog("I'm a F key!")
-        receiveKeyboard(65);
-    }
-
-    @IBAction func fSharpKeyPressed(sender: UIButton) {
-        //NSLog("I'm a F# key!")
-        receiveKeyboard(66);
-    }
-    
-    @IBAction func gKeyPressed(sender: UIButton) {
-        //NSLog("I'm a G key!")
-        receiveKeyboard(67);
-    }
-    
-    @IBAction func gSharpKeyPressed(sender: UIButton) {
-        //NSLog("I'm a G# key!")
-        receiveKeyboard(68);
-    }
-    
-    @IBAction func aKeyPressed(sender: UIButton) {
-        //NSLog("I'm a A key!")
-        receiveKeyboard(69);
-    }
-    
-    @IBAction func aSharpKeyPressed(sender: UIButton) {
-        //NSLog("I'm a A# key!")
-        receiveKeyboard(70);
-    }
-    
-    @IBAction func bKeyPressed(sender: UIButton) {
-        //NSLog("I'm a B key!")
-        receiveKeyboard(71);
-    }
-    
     
     @IBOutlet weak var showArrayTextField: UITextField!
     
