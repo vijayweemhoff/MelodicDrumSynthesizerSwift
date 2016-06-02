@@ -45,12 +45,6 @@ Scrollable Keyboard is geimplementeerd in app. Preview sound ook ingebouwd tijde
 To Do's:
 Parameters synth controllable maken
 
-Nadenken over een interface met keyboard die scrollable is, vervelende manier van editen zo.
-
-Random velocity generator in de TapPressed functie bouwen zodat de ADSR bestuurd kan worden door die velocity
-(NSTimer voor note-off, de timer aantal (milli)seconden moet ook beinvloed worden door velocity dan)
-Array gemaakt met 6 waardes optellend, nu nog de adsr aanpassen voordat hij word afgevuurd door playNote()
-
 Nadenken over het opslaan van presets (lijsten kunnen opslaan voor bijvoorbeeld optredens)
 
 Nadenken over gestures om bijvoorbeeld naar begin lijst te gaan

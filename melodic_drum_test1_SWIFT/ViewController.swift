@@ -287,7 +287,36 @@ class ViewController: UIViewController {
         }
         
         //NSLog("xMutArray: %d", xMutArray);
-        let stringForTextField = String(mutArray[xMutArray]);
+        var stringForTextField = ""
+        switch(Int(mutArray[xMutArray] as! NSNumber)%12)
+        {
+            case 0:
+                stringForTextField="C"
+            case 1:
+                stringForTextField="C#"
+            case 2:
+                stringForTextField="D"
+            case 3:
+                stringForTextField="D#"
+            case 4:
+                stringForTextField="E"
+            case 5:
+                stringForTextField="F"
+            case 6:
+                stringForTextField="F#"
+            case 7:
+                stringForTextField="G"
+            case 8:
+                stringForTextField="G#"
+            case 9:
+                stringForTextField="A"
+            case 10:
+                stringForTextField="A#"
+            case 11:
+                stringForTextField="B"
+            default: break
+        }
+        
         
         showArrayTextField.text = stringForTextField;
       
