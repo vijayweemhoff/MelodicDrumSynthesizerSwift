@@ -493,9 +493,9 @@ class ViewController: UIViewController {
         previewTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(ViewController.previewNoteOFF), userInfo: nil, repeats: false)
         
         //play the Note
-        conductor.core.playNote(inputKeyboard,velocity: 80)
+        conductor.core.playNote(inputAfterOctaveSwitch,velocity: 80)
         
-        lastInputKeyboard=inputKeyboard
+        lastInputKeyboard=inputAfterOctaveSwitch
     }
     
     @IBOutlet weak var showArrayTextField: UITextField!
