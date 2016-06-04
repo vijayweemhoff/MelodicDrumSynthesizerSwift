@@ -250,11 +250,6 @@ class ViewController: UIViewController {
         conductor.core.sustainLevel = 0.001
         conductor.core.releaseDuration = 0
     }
-
-
-    var xMutArray = 0;
-    var counterAddArray=0;
-    var countPlus=0;
     
     var counterKeyPressed=0;
     var midiNote = 0;
@@ -264,39 +259,30 @@ class ViewController: UIViewController {
     var velocity=0;
     var velocity2=0.0;
     var timer = NSTimer()
+    
+    var showArray=0
+    func loopInList(){
+        if(showArray>=mutArray.count-1){
+            showArray=0
+        }
+        
+        showArray=showArray+1
+    }
 
     @IBAction func tapButtonPressedDown(sender: UIButton) {
-        //NSLog("tap!");
-        
-        xMutArray=xMutArray+1;
-        
-        //check if mutArray is empty, to not show "List is Empty"
-        if(counterAddArray>=1)
-        {
-        countPlus=1;
-        }
-        else
-        {
-            countPlus=0;
-        }
-        
-        //check if index is equal to how many objects there are in the mutArray
-        // +1 is necessary to lose the "List is Empty" note
-        // countPlus is to lose "List is empty" when there are objects added to mutArray
-        if(xMutArray>=(counterAddArray+1))
-        {
-            xMutArray=(0+countPlus);
+
+        if(mutArray.count==1){
+            showArrayTextField.text = "List is empty"
         }
         
         var stringForTextField = ""
-        if(xMutArray==0){
-        stringForTextField="List is empty"
-        }
-        else{
-        //NSLog("xMutArray: %d", xMutArray);
         
-        switch(Int(mutArray[xMutArray] as! NSNumber)%12)
-        {
+        if(mutArray.count>1){
+            loopInList()
+            showArrayTextField.text = String(mutArray[showArray])
+            
+            switch(Int(mutArray[showArray] as! NSNumber)%12)
+            {
             case 0:
                 stringForTextField="C"
             case 1:
@@ -322,16 +308,15 @@ class ViewController: UIViewController {
             case 11:
                 stringForTextField="B"
             default: break
+            }
+            showArrayTextField.text = stringForTextField;
         }
-        }
-        
-        showArrayTextField.text = stringForTextField;
-      
+
 
         //Frequency wordt alleen aangepast wanneer er iets in de array gedaan is.
-        if(counterAddArray>=1)
+        if(mutArray.count>1)
         {
-            midiNote = Int(mutArray[xMutArray] as! NSNumber);
+            midiNote = Int(mutArray[showArray] as! NSNumber);
             
             counterKeyPressed=counterKeyPressed+1;
             //voice.receivedMIDINoteOn(avAudioNode, note: Double(mutArray[xMutArray] as! NSNumber), velocity: 80)
@@ -390,55 +375,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func addToArrayPressedDown(sender: UIButton) {
-        //xMutArray is 1 to lose the "List is Empty" line
-        xMutArray=0;
-        
-        counterAddArray=counterAddArray+1;
-        
         //create a random MIDI value to simulate not yet existing keyboard
         let randomMIDI = Int(arc4random_uniform(126)+1);
         mutArray.addObject(randomMIDI);
-        //NSLog("counterAddArray is: %d",counterAddArray);
         NSLog("array is: %@",mutArray);
     }
     
     
     @IBAction func clearListButtonPressedTouchUpInside(sender: UIButton) {
-        xMutArray=0;
-        counterAddArray=0;
         mutArray.removeAllObjects();
         mutArray.addObject("List is empty");
-        counterKeyPressed=0;
     }
     
     @IBAction func deleteLastObjectPressedTouchUpInside(sender: UIButton) {
         //NSLog("Delete last object is pressed");
-        //NSLog("counterAddArray is: %d",counterAddArray);
-        if(counterAddArray==0)
-        {
-            xMutArray=0;
+        if(mutArray.count>1){
+            mutArray.removeLastObject();
         }
-        else
-        {
-        xMutArray=1;
+        else{
+            showArrayTextField.text = "Can't delete anymore"
         }
-        
-        if(counterAddArray>0)
-        {
-             mutArray.removeLastObject();
-             counterAddArray=counterAddArray-1;
-             if(counterAddArray==0)
-             {
-                xMutArray=0;
-                counterKeyPressed=0;
-             }
-        }
-        else
-        {
-            //NSLog("Can't delete anymore");
-            showArrayTextField.text = "Can't delete anymore";
-        }
-
     }
     
     var octaveState = 0;
@@ -481,10 +437,6 @@ class ViewController: UIViewController {
     {   //add buttons to put octave up or down
         let inputAfterOctaveSwitch = (inputKeyboard+octaveState);
         NSLog("input after octave switch %d",inputAfterOctaveSwitch);
-        
-        //xMutArray is 1 to lose the "List is Empty" line
-        counterAddArray=counterAddArray+1;
-        xMutArray=0;
         
         //add element to array
         mutArray.addObject(inputAfterOctaveSwitch);
