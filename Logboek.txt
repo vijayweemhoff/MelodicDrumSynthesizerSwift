@@ -51,10 +51,15 @@ Nadenken over gestures om bijvoorbeeld naar begin lijst te gaan
 
 Nadenken over TableViewController om je midiNoten lijst te kunnen besturen
 
-Nadenken over een MIDI naar tekst converter maken MIDICC 60 word dan C1
-(waarschijnlijk met modulo te doen)
+MIDI naar tekst converter MIDICC 60 word dan C1 (Nog octaaf aangeven?)
 
 Nadenken over test-sessies met muzikanten zodra de test-app er is
+
+User interface dingen als hoe lang tonen moeten duren moet instelbaar zijn. Sommig willen heel erg lange sustain en lange tijd voor note off. Anderen juist alleen maar korte nootjes.
+
+Polyfonie optie is ook gaaf om in te bouwen. Akkoorden met 1 druk op de knop. Denken aan hoe je dat in bouwd in de UI. Monofoon werkt nu gaaf maar polyfonie zou nog wel cool zijn.
+
+Wanneer je door je lijst aan het tappen bent ook een gave optie om dan van octaven te switchen. Kwint omhoog of naar beneden ook leuk. Nadenken of je hier gestures voor kan maken
 
 
 

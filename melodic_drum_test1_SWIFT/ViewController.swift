@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        NSLog("ViewController did load..")
+        //NSLog("ViewController did load..")
         
         //set Preset Control values
         setDefaultValues()
@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         tapButton.layer.cornerRadius = 4
         octaveDown.layer.cornerRadius = 4
         octaveUp.layer.cornerRadius = 4
+        
+        //NSLog("%@",velocityArray.count)
     
     }
     
@@ -286,8 +288,13 @@ class ViewController: UIViewController {
             xMutArray=(0+countPlus);
         }
         
-        //NSLog("xMutArray: %d", xMutArray);
         var stringForTextField = ""
+        if(xMutArray==0){
+        stringForTextField="List is empty"
+        }
+        else{
+        //NSLog("xMutArray: %d", xMutArray);
+        
         switch(Int(mutArray[xMutArray] as! NSNumber)%12)
         {
             case 0:
@@ -316,7 +323,7 @@ class ViewController: UIViewController {
                 stringForTextField="B"
             default: break
         }
-        
+        }
         
         showArrayTextField.text = stringForTextField;
       
@@ -522,17 +529,6 @@ class ViewController: UIViewController {
 
         
     }
-
-    /*
-    //TODO's
-    //rename Instrument.swift -> Voice
-    //rename "AudioSystem group -> Audio
-    
-    //correcte output pakken: 
-      //-sourceMixer ipv osc als output. Dit werkend krijgen met geluid.
-      //-adsr werkend krijgen
-    */
-  
     
     
 } //closing UIViewController
