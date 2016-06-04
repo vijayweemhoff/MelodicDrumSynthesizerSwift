@@ -277,7 +277,10 @@ class ViewController: UIViewController {
         
         var stringForTextField = ""
         
-        if(mutArray.count>1){
+        //Frequency wordt alleen aangepast wanneer er iets in de array gedaan is.
+        if(mutArray.count>1)
+        {
+            //firing loopInList changes Int: showArray
             loopInList()
             showArrayTextField.text = String(mutArray[showArray])
             
@@ -310,12 +313,9 @@ class ViewController: UIViewController {
             default: break
             }
             showArrayTextField.text = stringForTextField;
-        }
-
-
-        //Frequency wordt alleen aangepast wanneer er iets in de array gedaan is.
-        if(mutArray.count>1)
-        {
+            
+            //preparing for launching a note in AudioKit
+            
             midiNote = Int(mutArray[showArray] as! NSNumber);
             
             counterKeyPressed=counterKeyPressed+1;

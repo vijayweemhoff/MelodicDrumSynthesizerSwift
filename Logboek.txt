@@ -41,6 +41,13 @@ Lengte aan velocity gekoppeld met note off door NSTimer en release langer met ho
 In nieuw project een scrollView Keyboard gemaakt, te vinden op GitHub in repositorie scrollView_keyboard_test.
 Scrollable Keyboard is geimplementeerd in app. Preview sound ook ingebouwd tijdens invoeren.
 
+4 juni:
+Nieuwe code gemaakt om interface makkelijker te besturen.
+100 codelijnen weg gehaald en er 30 nieuwe in gezet.
+Door deze nieuwe code is het bijna mogelijk om presets in te laden.
+In principe zou het nu mogelijk moeten zijn om 1 preset te kunnen opslaan.
+Nu dus nadenken over een interface om een naam te geven aan een preset en een interface om je preset te kunnen vinden en inladen.
+Waarschijnlijk dat laatste met een TableView.
 
 To Do's:
 Parameters synth controllable maken
