@@ -15,6 +15,7 @@ var velocityArray : NSArray = [20.0,40.0,60.0,80.0,100.0,120.0]
 
 class ViewController: UIViewController {
 
+    @IBOutlet var chooseWaveSegment: UISegmentedControl!
     @IBOutlet weak var octaveDown: UIButton!
     @IBOutlet weak var octaveUp: UIButton!
     @IBOutlet weak var tapButton: UIButton!
@@ -35,6 +36,10 @@ class ViewController: UIViewController {
         tapButton.layer.cornerRadius = 4
         octaveDown.layer.cornerRadius = 4
         octaveUp.layer.cornerRadius = 4
+        
+        //set choosewave segment and audio
+        self.chooseWaveSegment.selectedSegmentIndex = 3
+        conductor.core.waveform1 = 3
         
         //NSLog("%@",velocityArray.count)
     
@@ -247,7 +252,7 @@ class ViewController: UIViewController {
         // ADSR
         conductor.core.attackDuration = 0.1
         conductor.core.decayDuration = 0.1
-        conductor.core.sustainLevel = 0.001
+        conductor.core.sustainLevel = 0.8
         conductor.core.releaseDuration = 0
     }
     
@@ -340,14 +345,18 @@ class ViewController: UIViewController {
             xVelocityArray=xVelocityArray+1;
             NSLog("veloctiy is: %d",velocity)
             
+            var release = (velocity2/63.5)-0.3
+            if(release<=0.1){
+                release = 0.1
+            }
             
             //initialize adsr
-            conductor.core.attackDuration = 0.1
-            conductor.core.decayDuration = 0.1
-            conductor.core.sustainLevel = 0.8
-            conductor.core.releaseDuration = (velocity2/63.5)-0.2
+//            conductor.core.attackDuration = 0.1
+//            conductor.core.decayDuration = 0.1
+//            conductor.core.sustainLevel = 0.8
+            conductor.core.releaseDuration = release
             
-            let release = (velocity2/63.5)-0.2
+//            let release = (velocity2/63.5)-0.2
             NSLog("release: %f",release)
             
             let velocityTime = velocity2/90.0

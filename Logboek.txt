@@ -53,6 +53,9 @@ To Do's:
 Parameters synth controllable maken
 
 Nadenken over het opslaan van presets (lijsten kunnen opslaan voor bijvoorbeeld optredens)
+Wanneer je op opslaan drukt: naam venstertje in beeld waar je de preset een naam kan geven.
+Recall preset brengt je naar een nieuw scherm waar je al je opgeslagen presets kan zien.
+In dat scherm kan je ze bekijken, inladen en verwijderen.ß
 
 Nadenken over gestures om bijvoorbeeld naar begin lijst te gaan
 

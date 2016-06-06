@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-h0-0Ku">
-                                <rect key="frame" x="30" y="133" width="123" height="30"/>
+                                <rect key="frame" x="10" y="122" width="123" height="30"/>
                                 <color key="tintColor" red="1" green="0.022048105450000001" blue="0.25620723960000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Delete last Object"/>
                                 <connections>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYK-wZ-FGp">
-                                <rect key="frame" x="61" y="161" width="60" height="30"/>
+                                <rect key="frame" x="41" y="150" width="60" height="30"/>
                                 <color key="tintColor" red="1" green="0.022048105450000001" blue="0.25620723960000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Clear list"/>
                                 <connections>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmR-mU-f8S">
-                                <rect key="frame" x="30" y="20" width="94" height="86"/>
+                                <rect key="frame" x="10" y="28" width="94" height="86"/>
                                 <color key="backgroundColor" red="0.54590534050899864" green="0.8740155872829477" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Tap!">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,19 +44,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go through your list:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-kv-qMS">
-                                <rect key="frame" x="158" y="20" width="156" height="22"/>
+                                <rect key="frame" x="143" y="28" width="156" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0N-uM-XEK">
-                                <rect key="frame" x="158" y="50" width="156" height="30"/>
+                                <rect key="frame" x="143" y="58" width="156" height="30"/>
                                 <color key="backgroundColor" red="0.45485283670404836" green="0.81630562118666061" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3s-sI-0YK">
-                                <rect key="frame" x="173" y="161" width="126" height="30"/>
+                                <rect key="frame" x="173" y="150" width="126" height="30"/>
                                 <state key="normal" title="Add random to list">
                                     <color key="titleColor" red="0.069118710669905395" green="0.073889158295213628" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc7-3Y-Fju">
-                                <rect key="frame" x="10" y="204" width="100" height="30"/>
+                                <rect key="frame" x="5" y="189" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.06911871067" green="0.073889158299999994" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Octave down"/>
@@ -74,14 +74,27 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ip-b2-3jj">
-                                <rect key="frame" x="109" y="204" width="44" height="30"/>
+                                <rect key="frame" x="104" y="189" width="44" height="30"/>
                                 <color key="backgroundColor" red="0.06911871067" green="0.073889158299999994" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="0.98845422579999997" blue="0.99779467229999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5e-gT-QsW">
+                                <rect key="frame" x="0.0" y="227" width="320" height="232"/>
+                                <color key="backgroundColor" red="0.24789423329999999" green="0.47368784149999998" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clj-oh-YHp">
+                                <rect key="frame" x="147" y="189" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.06911871067" green="0.073889158299999994" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Octave up"/>
+                                <connections>
+                                    <action selector="octaveUpPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="efF-X0-5SF"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-q7-Hg6">
-                                <rect key="frame" x="10" y="486" width="228" height="29"/>
+                                <rect key="frame" x="5" y="467" width="228" height="29"/>
                                 <segments>
                                     <segment title="Triangle"/>
                                     <segment title="Square"/>
@@ -92,25 +105,13 @@
                                     <action selector="chooseWave:" destination="BYZ-38-t0r" eventType="valueChanged" id="B8u-kb-ifh"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5e-gT-QsW">
-                                <rect key="frame" x="0.0" y="238" width="414" height="240"/>
-                                <color key="backgroundColor" red="0.24789423329999999" green="0.47368784149999998" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clj-oh-YHp">
-                                <rect key="frame" x="152" y="204" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.06911871067" green="0.073889158299999994" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Octave up"/>
-                                <connections>
-                                    <action selector="octaveUpPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="efF-X0-5SF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.98845422579999997" blue="0.99779467229999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="chooseWaveSegment" destination="4Uz-q7-Hg6" id="7pz-6a-9U4"/>
                         <outlet property="octaveDown" destination="clj-oh-YHp" id="jVI-41-0gi"/>
                         <outlet property="octaveUp" destination="gc7-3Y-Fju" id="mrY-Gt-ldU"/>
                         <outlet property="scrollView" destination="A5e-gT-QsW" id="Ec7-Tw-Ev2"/>
@@ -121,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="387"/>
+            <point key="canvasLocation" x="280" y="398"/>
         </scene>
     </scenes>
 </document>
