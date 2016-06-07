@@ -49,17 +49,16 @@ In principe zou het nu mogelijk moeten zijn om 1 preset te kunnen opslaan.
 Nu dus nadenken over een interface om een naam te geven aan een preset en een interface om je preset te kunnen vinden en inladen.
 Waarschijnlijk dat laatste met een TableView.
 
+7 juni:
+preset maak en inlaad functie gemaakt, met delete functie.
+Inlaad functie is met tableView. Omdat ik tableView begreep na een aantal keer maken was het vrij makkelijk om ook een tabelView te maken om de huidige speel lijst als het waren te weergeven. Zou mooi zijn als er in die table ook nog een midi naar letter converter zou zitten. Maar nu te weinig tijd voor.
+
 To Do's:
 Parameters synth controllable maken
 
-Nadenken over het opslaan van presets (lijsten kunnen opslaan voor bijvoorbeeld optredens)
-Wanneer je op opslaan drukt: naam venstertje in beeld waar je de preset een naam kan geven.
-Recall preset brengt je naar een nieuw scherm waar je al je opgeslagen presets kan zien.
-In dat scherm kan je ze bekijken, inladen en verwijderen.ß
+Nadenken over gestures om bijvoorbeeld naar begin lijst te gaan. (is nu een button)
 
-Nadenken over gestures om bijvoorbeeld naar begin lijst te gaan
-
-Nadenken over TableViewController om je midiNoten lijst te kunnen besturen
+Nadenken over TableViewController om je midiNoten lijst te kunnen besturen (weergeeft nu alleenmaar, geen edit mogelijkheden)
 
 MIDI naar tekst converter MIDICC 60 word dan C1 (Nog octaaf aangeven?)
 
