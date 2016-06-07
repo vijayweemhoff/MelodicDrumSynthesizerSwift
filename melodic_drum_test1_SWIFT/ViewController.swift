@@ -186,6 +186,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell:UITableViewCell = self.tableView!.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
         cell.textLabel?.text = String(self.showMutArray[(indexPath.row+1)]) //as? String
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.blueColor()
         
         return cell
     }
@@ -579,6 +581,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    @IBAction func backToStartPressed(sender: UIButton) {
+        showArray=0
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView!.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+    }
     
 } //closing UIViewController
 

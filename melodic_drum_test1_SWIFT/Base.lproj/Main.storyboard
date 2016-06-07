@@ -43,6 +43,18 @@
                                     <action selector="tapButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="N6g-3u-0ZG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go through your list:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-kv-qMS">
+                                <rect key="frame" x="129" y="20" width="156" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0N-uM-XEK">
+                                <rect key="frame" x="129" y="50" width="156" height="30"/>
+                                <color key="backgroundColor" red="0.45485283670404836" green="0.81630562118666061" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3s-sI-0YK">
                                 <rect key="frame" x="147" y="150" width="126" height="30"/>
                                 <state key="normal" title="Add random to list">
@@ -121,18 +133,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="vfM-QO-akJ"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go through your list:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-kv-qMS">
-                                <rect key="frame" x="129" y="20" width="156" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0N-uM-XEK">
-                                <rect key="frame" x="129" y="50" width="156" height="30"/>
-                                <color key="backgroundColor" red="0.45485283670404836" green="0.81630562118666061" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1q-gv-rBl">
+                                <rect key="frame" x="129" y="84" width="88" height="30"/>
+                                <state key="normal" title="Back to start"/>
+                                <connections>
+                                    <action selector="backToStartPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="I1y-tS-PFe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.98845422579999997" blue="0.99779467229999996" alpha="1" colorSpace="calibratedRGB"/>
