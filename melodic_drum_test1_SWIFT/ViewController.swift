@@ -15,13 +15,16 @@ var presetArray: NSMutableArray = [""]
 var velocityArray : NSArray = [20.0,40.0,60.0,80.0,100.0,120.0]
 let userDefaults = NSUserDefaults.standardUserDefaults()
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var showMutArray = mutArray
+    
     @IBOutlet var chooseWaveSegment: UISegmentedControl!
     @IBOutlet weak var octaveDown: UIButton!
     @IBOutlet weak var octaveUp: UIButton!
     @IBOutlet weak var tapButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet var tableView: UITableView!
+    
     let numberOfButtons = 36
     
     override func viewDidLoad() {
@@ -34,6 +37,12 @@ class ViewController: UIViewController {
         
         //set up scrollable keyBoard
         setupKeyboard()
+        
+        //set up tableView
+        showMutArray = mutArray
+        NSLog(String(showMutArray))
+        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView!.reloadData()
         
         tapButton.layer.cornerRadius = 4
         octaveDown.layer.cornerRadius = 4
@@ -167,6 +176,23 @@ class ViewController: UIViewController {
         //set width off scrollView
         self.scrollView.contentSize.width = CGFloat(1260)
     }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.showMutArray.count-1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.tableView!.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+        cell.textLabel?.text = String(self.showMutArray[(indexPath.row+1)]) //as? String
+        
+        return cell
+    }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//    }
+
     
     
     func buttonAction(sender:UIButton!)
@@ -334,6 +360,9 @@ class ViewController: UIViewController {
             //voice.receivedMIDINoteOn(avAudioNode, note: Double(mutArray[xMutArray] as! NSNumber), velocity: 80)
             /// Sustain Level
             
+            //highlite tableView
+            let indexPath = NSIndexPath(forRow: showArray-1, inSection: 0)
+            self.tableView!.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
             
             if(counterKeyPressed>0)
             {
@@ -401,12 +430,18 @@ class ViewController: UIViewController {
     @IBAction func clearListButtonPressedTouchUpInside(sender: UIButton) {
         mutArray.removeAllObjects();
         mutArray.addObject("List is empty");
+        //refresh tableView
+        showMutArray = mutArray
+        reloadTableView()
     }
     
     @IBAction func deleteLastObjectPressedTouchUpInside(sender: UIButton) {
         //NSLog("Delete last object is pressed");
         if(mutArray.count>1){
             mutArray.removeLastObject();
+            //refresh tableView
+            showMutArray = mutArray
+            reloadTableView()
         }
         else{
             showArrayTextField.text = "Can't delete anymore"
@@ -504,6 +539,19 @@ class ViewController: UIViewController {
         conductor.core.playNote(inputAfterOctaveSwitch,velocity: 80)
         
         lastInputKeyboard=inputAfterOctaveSwitch
+        
+        //refresh tableView
+        showMutArray = mutArray
+        reloadTableView()
+        //highlite tableView
+        let indexPath = NSIndexPath(forRow: mutArray.count-2, inSection: 0)
+        self.tableView!.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+        //NSLog(String(showMutArray))
+        
+    }
+    
+    @IBAction func reloadTableView(){
+        self.tableView!.reloadData()
     }
     
     @IBOutlet weak var showArrayTextField: UITextField!

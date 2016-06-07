@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "melodic_drum_test1_SWIFT/ViewController.swift"
-            timestampString = "487014607.913105"
+            timestampString = "487024043.021821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
             landmarkName = "tapButtonPressedDown(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "melodic_drum_test1_SWIFT/ViewController.swift"
-            timestampString = "487014607.913105"
+            timestampString = "487024043.021821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "367"
-            endingLineNumber = "367"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
             landmarkName = "tapButtonPressedDown(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "melodic_drum_test1_SWIFT/ViewController.swift"
-            timestampString = "487014607.913105"
+            timestampString = "487024043.021821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
             landmarkName = "noteOFF()"
             landmarkType = "5">
          </BreakpointContent>
@@ -145,6 +145,22 @@
                   offsetFromSymbolStart = "145">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "melodic_drum_test1_SWIFT/ViewController.swift"
+            timestampString = "487023237.505352"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

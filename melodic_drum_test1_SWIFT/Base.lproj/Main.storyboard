@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmR-mU-f8S">
-                                <rect key="frame" x="10" y="28" width="94" height="86"/>
+                                <rect key="frame" x="10" y="20" width="94" height="86"/>
                                 <color key="backgroundColor" red="0.54590534050899864" green="0.8740155872829477" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Tap!">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,18 +43,6 @@
                                     <action selector="tapButtonPressedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="N6g-3u-0ZG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go through your list:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-kv-qMS">
-                                <rect key="frame" x="143" y="28" width="156" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0N-uM-XEK">
-                                <rect key="frame" x="143" y="58" width="156" height="30"/>
-                                <color key="backgroundColor" red="0.45485283670404836" green="0.81630562118666061" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3s-sI-0YK">
                                 <rect key="frame" x="147" y="150" width="126" height="30"/>
                                 <state key="normal" title="Add random to list">
@@ -102,15 +90,6 @@
                                     <action selector="chooseWave:" destination="BYZ-38-t0r" eventType="valueChanged" id="B8u-kb-ifh"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4P-jq-0k2">
-                                <rect key="frame" x="281" y="150" width="125" height="30"/>
-                                <state key="normal" title="Save list as preset">
-                                    <color key="titleColor" red="0.4366620532798714" green="1" blue="0.010458854773576887" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveListPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z5j-JK-nDp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Riv-8J-dSY">
                                 <rect key="frame" x="302" y="189" width="82" height="30"/>
                                 <state key="normal" title="Load preset">
@@ -120,6 +99,40 @@
                                     <segue destination="N9J-P5-0HE" kind="show" id="h32-vB-Ali"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4P-jq-0k2">
+                                <rect key="frame" x="281" y="150" width="125" height="30"/>
+                                <state key="normal" title="Save list as preset">
+                                    <color key="titleColor" red="0.4366620532798714" green="1" blue="0.010458854773576887" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveListPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z5j-JK-nDp"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="20" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-zt-Ba1">
+                                <rect key="frame" x="302" y="20" width="104" height="132"/>
+                                <color key="backgroundColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.24789423329999999" green="0.47368784149999998" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hDm-5Z-SYY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vfM-QO-akJ"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go through your list:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-kv-qMS">
+                                <rect key="frame" x="129" y="20" width="156" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0N-uM-XEK">
+                                <rect key="frame" x="129" y="50" width="156" height="30"/>
+                                <color key="backgroundColor" red="0.45485283670404836" green="0.81630562118666061" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.42172074300000001" green="0.7405765903" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.98845422579999997" blue="0.99779467229999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,6 +145,7 @@
                         <outlet property="scrollView" destination="A5e-gT-QsW" id="Ec7-Tw-Ev2"/>
                         <outlet property="showArrayTextField" destination="y0N-uM-XEK" id="FM2-3f-iM8"/>
                         <outlet property="showOctaveState" destination="2ip-b2-3jj" id="2yo-aJ-CXt"/>
+                        <outlet property="tableView" destination="gL9-zt-Ba1" id="b85-ff-Wo0"/>
                         <outlet property="tapButton" destination="WmR-mU-f8S" id="cEw-es-QKf"/>
                     </connections>
                 </viewController>
