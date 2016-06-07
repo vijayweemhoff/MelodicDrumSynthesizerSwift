@@ -11,7 +11,9 @@ import Foundation
 import AudioKit
 
 var mutArray : NSMutableArray = ["List is empty"]
+var presetArray: NSMutableArray = [""]
 var velocityArray : NSArray = [20.0,40.0,60.0,80.0,100.0,120.0]
+let userDefaults = NSUserDefaults.standardUserDefaults()
 
 class ViewController: UIViewController {
 
@@ -25,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //NSLog("ViewController did load..")
+        NSLog("ViewController did load")
         
         //set Preset Control values
         setDefaultValues()
@@ -41,8 +43,13 @@ class ViewController: UIViewController {
         self.chooseWaveSegment.selectedSegmentIndex = 3
         conductor.core.waveform1 = 3
         
-        //NSLog("%@",velocityArray.count)
-    
+        showOctaveState.text = "0"
+        
+        //set presetArray to saved presets
+        if let tempNames: NSArray = NSUserDefaults.standardUserDefaults().arrayForKey("presets") {
+            presetArray = tempNames.mutableCopy() as! NSMutableArray
+        }
+        NSLog(String(presetArray))
     }
     
     func setupKeyboard()
@@ -404,6 +411,39 @@ class ViewController: UIViewController {
         else{
             showArrayTextField.text = "Can't delete anymore"
         }
+    }
+    
+    func addTextField(textField: UITextField){
+        textField.placeholder = "Insert a name for your preset"
+    }
+    
+    @IBAction func AlertGiveName(){
+        let alertController = UIAlertController(title: "Make preset", message: "Insert a name", preferredStyle:UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){
+            action -> Void in
+            NSLog("Pressed Ok")
+            if let alertTextField = alertController.textFields?.first where alertTextField.text != nil {
+                //get the text out of textfield
+                presetArray.addObject(alertTextField.text!)
+                NSLog(String(presetArray))
+                
+                // save the preset
+                NSUserDefaults.standardUserDefaults().setObject(mutArray, forKey: alertTextField.text!)
+                NSUserDefaults.standardUserDefaults().synchronize()
+                
+                //save the presetArray in NSDefault so it can be default.
+                NSUserDefaults.standardUserDefaults().setObject(presetArray, forKey: "presets")
+                NSUserDefaults.standardUserDefaults().synchronize()
+            }
+            })
+        alertController.addTextFieldWithConfigurationHandler(addTextField)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func saveListPressed(sender: UIButton) {
+        AlertGiveName()
+        NSLog(String(presetArray))
     }
     
     var octaveState = 0;
