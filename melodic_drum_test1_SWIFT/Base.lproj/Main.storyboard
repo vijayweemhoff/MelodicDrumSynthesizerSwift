@@ -160,19 +160,23 @@
                                     <outlet property="delegate" destination="N9J-P5-0HE" id="2CV-tp-0J7"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your presets select and press back:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ean-91-Yij">
-                                <rect key="frame" x="5" y="78" width="273" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bX-3u-cn0">
-                                <rect key="frame" x="5" y="13" width="118" height="30"/>
-                                <state key="normal" title="Back to play area">
+                                <rect key="frame" x="10" y="49" width="253" height="30"/>
+                                <state key="normal" title="Load preset and go back to play area">
                                     <color key="titleColor" red="0.06911871067" green="0.073889158299999994" blue="0.94981184549999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="loadAndGoBackPressed:" destination="N9J-P5-0HE" eventType="touchUpInside" id="K6X-5r-CK7"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="3go-4Y-eZM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOy-ns-ktB">
+                                <rect key="frame" x="312" y="49" width="92" height="30"/>
+                                <state key="normal" title="Delete preset">
+                                    <color key="titleColor" red="1" green="0.022048105450000001" blue="0.25620723960000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deletePresetPressed:" destination="N9J-P5-0HE" eventType="touchUpInside" id="QCT-QB-hlh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lek-Gj-OC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="398"/>
+            <point key="canvasLocation" x="902" y="398"/>
         </scene>
     </scenes>
 </document>

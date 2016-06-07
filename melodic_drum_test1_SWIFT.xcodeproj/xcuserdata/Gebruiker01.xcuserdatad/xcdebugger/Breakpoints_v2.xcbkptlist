@@ -74,13 +74,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "melodic_drum_test1_SWIFT/presetViewController.swift"
-            timestampString = "487009290.181301"
+            timestampString = "487018107.869921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "presetViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "melodic_drum_test1_SWIFT/presetViewController.swift"
+            timestampString = "487018107.869921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "deleteFromPresetArray()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "melodic_drum_test1_SWIFT.presetViewController.items.getter : __ObjC.NSMutableArray"
+                  moduleName = "melodic_drum_test1_SWIFT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gebruiker01/Documents/AudioKit-iOS/Examples/melodic_drum_test1_SWIFT/melodic_drum_test1_SWIFT/presetViewController.swift"
+                  timestampString = "487017890.231035"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "melodic_drum_test1_SWIFT.presetViewController.items.setter : __ObjC.NSMutableArray"
+                  moduleName = "melodic_drum_test1_SWIFT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gebruiker01/Documents/AudioKit-iOS/Examples/melodic_drum_test1_SWIFT/melodic_drum_test1_SWIFT/presetViewController.swift"
+                  timestampString = "487017890.231331"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "melodic_drum_test1_SWIFT.presetViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; melodic_drum_test1_SWIFT.presetViewController"
+                  moduleName = "melodic_drum_test1_SWIFT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gebruiker01/Documents/AudioKit-iOS/Examples/melodic_drum_test1_SWIFT/melodic_drum_test1_SWIFT/presetViewController.swift"
+                  timestampString = "487017890.231563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "melodic_drum_test1_SWIFT.presetViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;melodic_drum_test1_SWIFT.presetViewController&gt;"
+                  moduleName = "melodic_drum_test1_SWIFT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gebruiker01/Documents/AudioKit-iOS/Examples/melodic_drum_test1_SWIFT/melodic_drum_test1_SWIFT/presetViewController.swift"
+                  timestampString = "487017890.231798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
