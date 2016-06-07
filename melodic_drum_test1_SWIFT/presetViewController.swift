@@ -9,12 +9,18 @@
 import UIKit
 
 func deleteFromPresetArray(){
+    //first delete actual midi list with string from presetArray
+    NSUserDefaults.standardUserDefaults().removeObjectForKey(presetArray[indexDelete] as! String)
+    
     //delete from array
     presetArray.removeObjectAtIndex(indexDelete)
     
     //save the presetArray in NSDefault so it can be default.
     NSUserDefaults.standardUserDefaults().setObject(presetArray, forKey: "presets")
     NSUserDefaults.standardUserDefaults().synchronize()
+    
+    //optional NSLog all standardUserDefaults
+    print(NSUserDefaults.standardUserDefaults().dictionaryRepresentation())
 }
 
 var indexDelete = 0
@@ -22,6 +28,7 @@ var indexDelete = 0
 class presetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var items = presetArray
     var copyPresetArray: NSMutableArray = [""]
+    var tableViewTouched = 0
     
     
     @IBOutlet var tableView: UITableView?
@@ -40,7 +47,9 @@ class presetViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     @IBAction func loadAndGoBackPressed(sender: UIButton) {
-        mutArray = copyPresetArray
+        if(tableViewTouched>0){
+            mutArray = copyPresetArray
+        }
     }
     
     @IBAction func AlertSure(){
@@ -48,15 +57,8 @@ class presetViewController: UIViewController, UITableViewDelegate, UITableViewDa
         alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
         alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default){
             action -> Void in
-            //NSLog("Pressed Yes")
-            //delete from tableView
-            //self.items.removeObjectAtIndex(indexDelete)
-            
-            //send data to other viewController
             deleteFromPresetArray()
             self.tableView!.reloadData()
-        
-            //NSUserDefaults.standarUserDefaults().removeObjectForKey(HIERWELKEJEWILTVERWIJDEREN)
             })
         self.presentViewController(alertController, animated: true, completion: nil)
     }
@@ -83,6 +85,8 @@ class presetViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //if you want to delete you need index
         indexDelete = indexPath.row
         NSLog("%d",indexDelete)
+        tableViewTouched=tableViewTouched+1
+        NSLog("tableViewTouched: %d",tableViewTouched)
         
         //first copy the the preset array
         if let tempNames: NSArray = NSUserDefaults.standardUserDefaults().arrayForKey(presetArray[indexPath.row] as! String) {
